@@ -60,7 +60,7 @@ def encodeSection():
     print("> Encoding...")
     try:
       encoded = encodeString(text)
-      print(f"[{Fore.LIGHTGREEN_EX}Sucess{Fore.RESET}] Encoded Text: {Fore.LIGHTYELLOW_EX}{encodeString(text)}{Fore.RESET}")
+      print(f"[{Fore.LIGHTGREEN_EX}Success{Fore.RESET}] Encoded Text: {Fore.LIGHTYELLOW_EX}{encodeString(text)}{Fore.RESET}")
     except UnicodeEncodeError as err:
       print(f"[{Fore.LIGHTRED_EX}ERROR{Fore.RESET}] There was a problem encoding your string => {err}.")
     copy_to_board = input("Press ENTER to continue. Input 'C' to copy the result to clipboard. ")
@@ -84,7 +84,7 @@ def decodeSection():
     print("> Decoding...")
     try:
       decoded = decodeString(text)
-      print(f"[{Fore.LIGHTGREEN_EX}Sucess{Fore.RESET}] Decoded Text: {Fore.LIGHTYELLOW_EX}{decodeString(text)}{Fore.RESET}")
+      print(f"[{Fore.LIGHTGREEN_EX}Success{Fore.RESET}] Decoded Text: {Fore.LIGHTYELLOW_EX}{decodeString(text)}{Fore.RESET}")
     except UnicodeDecodeError as err:
       print(f"[{Fore.LIGHTRED_EX}ERROR{Fore.RESET}] There was a problem decoding your string => {err}.")
     copy_to_board = input("Press ENTER to continue. Input 'C' to copy the result to clipboard. ")
@@ -99,8 +99,10 @@ def main():
     print(
       "[A] OR [1] - Encode text\n"
       "[B] OR [2] - Decode text\n"
-      "[X] OR [3] - Exit"
+      "[X] OR [3] - Exit\n"
     )
+    print()
+    print("=> Encoder Decoder | Copyright © 2022 Mark E | v1.0.0")
     choice = input("Enter your choice: ")
     choice = take_input(choice, "int" if choice.isdigit() else "str")
     clearCMD()
