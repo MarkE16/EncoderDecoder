@@ -61,7 +61,7 @@ from pyperclip import copy
 
 clearCMD = lambda: os.system("cls")
 colorama.init(autoreset=True)
-version = "v1.0.0"
+version = "v1.0.3"
 
 def fetchLatestRelease():
   try:
